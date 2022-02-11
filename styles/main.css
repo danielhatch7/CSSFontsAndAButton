@@ -1,26 +1,26 @@
 :root {
   --text-color: #333;
 
-  /* dark green */
-  --main-color-dark: #19270d;
+  /* heading 1 / main color */
+  --main-color: #005f73;
 
-  /* pine green */
-  /* I used Smart Swatch to lighten the main color https://smart-swatch.netlify.app/ */
-  --main-color: #25591f;
-  --main-color-light: #38842f;
-  --main-color-extra-light: #c8ecc4;
+  /*  https://smart-swatch.netlify.app/ */
+  --main-color-light: #1193b2;
+  --main-color-extra-light: #30d6fd;
+  --main-color-dark: #003f4f;
 
-  /* autumn grass */
-  --highlight-color: #818c3c;
+  --viridian-green: #0a9396;
 
-  /* squirrel red */
-  --squirrel-red: #72601b;
+  --middle-blue-green: #94d2bd;
 
-  /* tree bark */
-  --pine-bark: #593a0e;
+  --medium-champagne: #e9d8a6;
+
+  --mahogany: #b03a03;
+  --mahogany-light: #e14c06;
+  --mahogany-extra-light: #fc874f;
+  --mahogany-dark: #7e2901;
 }
 
-/* useful reset to keep box sizing manageable */
 * {
   box-sizing: border-box;
 }
@@ -29,14 +29,14 @@
 
 body {
   color: var(--text-color);
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.5;
 }
 
 h1,
 h2,
 h3 {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Rowdies", cursive;
   line-height: 1.2;
   margin: 2em 0 0.5em;
 }
@@ -76,10 +76,10 @@ figure {
 }
 
 aside {
-  background-color: var(--highlight-color);
+  background-color: var(--viridian-green);
   color: #fff;
   margin-top: 6rem;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
 }
 
 aside h2 {
@@ -87,13 +87,12 @@ aside h2 {
   margin: 0;
 }
 
-/* if you are interested in how I created the triangle footer, 
-   I used Clippy - CSS clip-path maker at https://bennettfeely.com/clippy/ */
+/* CSS clip-path maker at https://bennettfeely.com/clippy/ */
 footer {
   background-color: var(--main-color);
   clip-path: polygon(0 0, 0% 100%, 100% 100%);
   color: #fff;
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Rowdies", cursive;
   font-size: 2em;
   margin-top: 12rem;
   padding: 12rem 1rem 2rem;
@@ -109,7 +108,7 @@ picture img {
 
 /***** general link styles *****/
 a:link {
-  color: var(--squirrel-red);
+  color: var(--middle-blue-green);
   font-weight: bold;
   text-decoration: none;
 }
@@ -129,40 +128,33 @@ a:not([href]):hover {
 
 a:active,
 a:focus {
-  background-color: var(--squirrel-red);
+  background-color: var(--middle-blue-green);
   color: #fff;
 }
 
 /***** utility styles *****/
 
 .button {
-  background-color: var(--main-color);
-  border-radius: 2px;
+  background-color: var(--mahogany);
+  border: 2px solid #fff;
+  border-radius: 100px;
   color: #fff;
   display: inline-block;
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Rowdies", cursive;
   font-size: 14px;
-  padding: 8px 15px;
+  padding: 8px 30px;
   text-align: center;
-  text-transform: uppercase;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* this makes it so the user can select the text, which keeps the cursor from turning into a text selection cursor */
+  transition: all 500ms ease;
   user-select: none;
+  margin: auto;
+  cursor: pointer;
 }
 
 .button:hover {
-  background-color: var(--main-color-light);
+  transform: scale(1.08);
+  background-color: var(--mahogany-light);
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3);
   text-decoration: none;
-}
-
-.button:active,
-.button:focus {
-  background-color: var(--main-color-extra-light);
-  /* using box shadow this way will create a border without upsetting the layout by changing the dimensions of the button like border would do */
-  box-shadow: 0 0 0 2px var(--main-color-dark) inset;
-  color: var(--main-color-dark);
 }
 
 /****** form styles  *****/
