@@ -65,6 +65,11 @@ p {
   margin: 0 0 1em;
 }
 
+dt,
+dd {
+  margin-bottom: 1em;
+}
+
 main {
   margin: 0 auto;
   max-width: 50rem;
@@ -90,16 +95,17 @@ aside h2 {
 /* CSS clip-path maker at https://bennettfeely.com/clippy/ */
 footer {
   background-color: var(--main-color);
-  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  text-align: center;
   color: #fff;
   font-family: "Rowdies", cursive;
   font-size: 2em;
-  margin-top: 12rem;
-  padding: 12rem 1rem 2rem;
+  margin: 5em 0em 0em;
+  padding: 6rem 0rem 6rem;
 }
 
 footer p {
   width: 50%;
+  margin: 0 auto;
 }
 
 picture img {
